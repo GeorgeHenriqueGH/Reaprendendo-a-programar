@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Trabalhando com números</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Trabalhando com números</h1>
+        <button id="btn">Clique aqui para calcular</button>
+        <p id="texto"></p>
+    </body>
+    <script>
+        const btn = window.document.getElementById("btn").addEventListener("click", () => {
+            let num = parseFloat(window.prompt("Digite um número:"));
+            let texto = window.document.getElementById("texto").innerHTML = `O dobro de<strong>${num} é ${num + num} e a metade é ${num / 2}</strong>`;
+        });
+    </script>
+</html>
