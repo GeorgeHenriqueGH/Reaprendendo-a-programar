@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Trabalhando com a DOM</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Trabalhando com a DOM</h1>
+        <button id="btn">Clique aqui para começar</button>
+        <p id="texto"></p>
+    </body>
+    <script>
+        const btn = window.document.getElementById("btn").addEventListener("click", () => {
+            let nome = window.prompt("Digite seu nome:");
+            let texto = window.document.getElementById("texto").innerHTML = `Prazer <strong>${nome}</strong> em te conhecer operador especial 🫡`;
+        });
+    </script>
+</html>
