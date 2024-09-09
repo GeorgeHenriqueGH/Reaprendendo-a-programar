@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Média aluno CFC</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Média aluno CFC</h1>
+        <button id="btn">Clique aqui para calcular</button>
+        <p id="texto1"></p>
+        <p id="texto2"></p>
+        <p id="texto3"></p>
+    </body>
+    <script>
+        function calculaMedia(n1, n2, n3) {
+            const soma = n1 + n2 + n3;
+            const result = soma / 3;
+            return Math.round(result);
+        }
+
+        const btn = window.document.getElementById("btn").addEventListener("click", () => {
+            let nome = window.prompt("Digite o nome do aluno:");
+            let texto1 = window.document.getElementById("texto1").innerHTML = `Calculando a média do aluno ${nome}`;
+
+            let n1 = parseFloat(window.prompt("Digite a primeira nota"));
+            let n2 = parseFloat(window.prompt("Digite a segunda nota"));
+            let n3 = parseFloat(window.prompt("Digite a terceira nota"));
+
+            let texto2 = window.document.getElementById("texto2").innerHTML = `${calculaMedia(n1, n2, n3)}`;
+        });
+    </script>
+</html>
