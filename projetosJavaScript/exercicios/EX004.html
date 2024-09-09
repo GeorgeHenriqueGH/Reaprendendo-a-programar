@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Manipulando números</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Manipulando números</h1>
+        <button id="btn">Iniciar soma</button>
+        <p id="texto"></p>
+    </body>
+    <script>
+            const btn = window.document.getElementById("btn").addEventListener("click", () => {
+            let n1 = parseFloat(window.prompt("Digite um número:"));
+            let n2 = parseFloat(window.prompt("Digite outro número:"));
+
+            const soma = n1 + n2;
+            let texto = window.document.getElementById("texto").innerHTML = `O valor dá soma é <strong>${soma}</strong>`;
+        });
+    </script>
+</html>
