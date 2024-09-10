@@ -26,8 +26,10 @@
             let n1 = parseFloat(window.prompt("Digite a primeira nota"));
             let n2 = parseFloat(window.prompt("Digite a segunda nota"));
             let n3 = parseFloat(window.prompt("Digite a terceira nota"));
+            
+            let texto2 = window.document.getElementById("texto2").innerHTML = `Anotas obtidas foram<strong>${n1}, ${n2} e ${n3}`;
+            let texto3 = window.document.getElementById("texto3").innerHTML = `A média final é ${calculaMedia(n1, n2, n3)}`;
 
-            let texto2 = window.document.getElementById("texto2").innerHTML = `${calculaMedia(n1, n2, n3)}`;
         });
     </script>
 </html>
