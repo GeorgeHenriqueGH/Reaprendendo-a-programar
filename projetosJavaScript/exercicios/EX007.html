@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Vários calculos com JavaScript</title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { background-color: #222; color: #fff; font-family: Arial, Helvetica, sans-serif; }
+        </style>
+    </head>
+    <body>
+        <h1>Vários calculos com JavaScript</h1>
+        <button id="btn" onclick="mostrar();">Clique para calcular</button>
+        <div id="secao"></div>
+    </body>
+    <script>
+        function mostrar() {
+            const secao = window.document.querySelector("#secao");
+            let numero = Number(window.prompt("Digite um número"));
+
+            secao.innerHTML = `<p>O valor absoluto é <mark>${numero}</mark></p>`;
+            secao.innerHTML += `<p>A sua parte inteira é <mark>${Math.abs(numero)}<mark></p>`;
+            secao.innerHTML += `<p>O valor inteiro mais proximo é <mark>${Math.round(numero)}</mark></p>`;
+            secao.innerHTML += `<p>A sua raiz quadrada é <mark>${Math.sqrt(numero)}</mark></p>`;
+            secao.innerHTML += `<p>Sua raiz cubica é <mark>${Math.cbrt(numero)}</mark></p>`;
+            secao.innerHTML += `<p>O seu valor é <mark>${Math.pow(numero, 2)}</mark></p>`;
+            secao.innerHTML += `<p>O seu valor é <mark>${Math.pow(numero, 3)}</mark></p>`;
+        }
+    </script>
+</html>
