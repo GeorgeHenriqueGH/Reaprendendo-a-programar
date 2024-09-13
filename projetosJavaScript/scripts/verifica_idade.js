@@ -8,4 +8,4 @@ window.alert(`Sua nota é ${nota}`);
 
 const content = window.document.getElementById("content");
 
-content.innerHTML = `Sua nota é ${nota}`;
+content.innerHTML = `]<p>Sua nota é ${nota}</p>`;
