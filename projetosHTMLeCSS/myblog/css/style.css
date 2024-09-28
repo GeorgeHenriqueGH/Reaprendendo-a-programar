@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --body: #0E0E10;
+    --header: #CC241D;
+    --title-color: #EFEFF1;
+    --bgcolor: #18181B;
+    --text-color: #fff;
+    --btn: #FE8019;
+}
+
+body { 
+    color: var(--color);
+    background-color: var(--body); 
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Cabeçalho */
+
+header {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--header);
+}
+
+h1.title-h1 {
+    font-size: 28pt;
+    color: var(--title-color);
+}
+
+nav.nav-header { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.nav-header ul li  { 
+    display: inline; 
+    padding: 10px;
+}
+
+nav.nav-header ul li a { 
+    text-decoration: solid; 
+    font-size: 15pt;
+}
+
+img.img {
+    width: 40px;
+    height: 40px;
+}
+
+button.toggle-theme {
+    font-size: 40px;
+    border: none;
+    background-color: var(--header);
+}
+
+/* postagens */
+
+section.postagem {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+article.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bgcolor);
+    width: 70vw;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+img.img-post {
+    height: 70vh;
+    width: 65vw;
+    border-radius: 6px;
+}
+
+h3 {
+    font-size: 30pt;
+    color: var(--title-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+div.post-info {
+    display: flex;
+    width: 65vw;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+button.getPost {
+    border: none;
+    background-color: var(--btn);
+    color: var(--title-color);
+    font-size: 15pt;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+button.getPost:hover { background-color: var(--header); }
+
+span.data-post {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+/* Configuração para mobile */
+
+@media(max-width: 450px) {
+    /* header for mobile */
+    h1.title-h1 { font-size: 17pt; }
+    nav.nav-header ul li a { font-size: 10pt; }
+    nav.nav-header ul li  { padding: 8px; }
+
+    /* post for mobile */
+    article.post { width: 86.5vw; }
+    img.img-post { 
+        width: 80vw; 
+        height: 40vh;
+    }
+    h3 { font-size: 20pt; }
+    div.post-info { width: 83vw; }
+}
