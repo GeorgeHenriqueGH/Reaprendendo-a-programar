@@ -9,6 +9,7 @@ const darkTheme = () => {
         window.document.documentElement.style.setProperty("--bgcolor", "#18181B");
         window.document.documentElement.style.setProperty("--text-color", "#FFF");
         window.document.documentElement.style.setProperty("--btn", "#FE8019");
+        window.document.documentElement.style.setProperty("--bgcolor2", "#665C54");
     } else {
         window.document.documentElement.style.setProperty("--body", "#F9F5D8");
         window.document.documentElement.style.setProperty("--header", "#FB4934");
@@ -16,6 +17,7 @@ const darkTheme = () => {
         window.document.documentElement.style.setProperty("--bgcolor", "#FAEFC5");
         window.document.documentElement.style.setProperty("--text-color", "#282828");
         window.document.documentElement.style.setProperty("--btn", "#FE8019");
+        window.document.documentElement.style.setProperty("--bgcolor2", "#A89984");
     }
     toogleTheme = !toogleTheme;
 }
