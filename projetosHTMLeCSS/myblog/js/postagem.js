@@ -21,6 +21,7 @@ async function getAllCharacters() {
         const getPost = window.document.createElement("button");
 
         img.src = data.imagem;
+        img.title = data.nome;
         img.classList.add("img-post");
 
         title.textContent = data.nome;
