@@ -11,6 +11,7 @@
     --header: #CC241D;
     --title-color: #EFEFF1;
     --bgcolor: #18181B;
+    --bgcolor2: #3C3836;
     --text-color: #fff;
     --btn: #FE8019;
 }
@@ -50,7 +51,10 @@ nav.nav-header ul li  {
 nav.nav-header ul li a { 
     text-decoration: solid; 
     font-size: 15pt;
+    color: var(--text-color);
 }
+
+nav.nav-header a:hover { color: var(--header); }
 
 img.img {
     width: 40px;
@@ -94,9 +98,7 @@ h3 {
     color: var(--title-color);
 }
 
-p {
-    color: var(--text-color);
-}
+p { color: var(--text-color); }
 
 div.post-info {
     display: flex;
@@ -122,6 +124,25 @@ span.data-post {
     font-size: 15pt;
 }
 
+footer {
+    margin-top: 30vh;
+    background-color: var(--bgcolor2);
+    color: var(--text-color);
+}
+
+div.content-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+}
+
+img.img-footer {
+    height: 12vh;
+    width: 20vw;
+}
+
 /* Configuração para mobile */
 
 @media(max-width: 450px) {
@@ -130,7 +151,7 @@ span.data-post {
     nav.nav-header ul li a { font-size: 10pt; }
     nav.nav-header ul li  { padding: 8px; }
 
-    /* post for mobile */
+    /* post para mobile */
     article.post { width: 86.5vw; }
     img.img-post { 
         width: 80vw; 
