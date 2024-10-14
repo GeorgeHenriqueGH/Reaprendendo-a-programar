@@ -20,6 +20,7 @@ body {
     color: var(--color);
     background-color: var(--body); 
     font-family: "Montserrat", sans-serif;
+    height: 100vh;
 }
 
 /* Cabeçalho */
@@ -126,8 +127,8 @@ span.data-post {
 
 footer {
     margin-top: 30vh;
-    background-color: var(--bgcolor2);
     color: var(--text-color);
+    background-color: var(--bgcolor2);
 }
 
 div.content-footer {
@@ -136,6 +137,17 @@ div.content-footer {
     align-items: center;
     flex-direction: column;
     height: 20vh;
+}
+
+h5 {
+    font-size: 20pt;
+    padding: 20px;
+}
+
+p.text-footer {
+    width: 70vw;
+    padding: 15px;
+    line-height: 1.3em;
 }
 
 img.img-footer {
@@ -159,4 +171,8 @@ img.img-footer {
     }
     h3 { font-size: 20pt; }
     div.post-info { width: 83vw; }
+
+    /*Footer for mobile*/
+    h5 { font-size: 15pt; }
+    div.content-footer { height: 43vh; }
 }
