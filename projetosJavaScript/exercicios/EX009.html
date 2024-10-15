@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Calculadora IMC</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+                background-color: #222;
+                color: #FFF;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                width: 50vw;
+                margin-top: 20vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <span class="title">Digite seu peso:</span>
+            <input id="peso" placeholder="Digite seu peso"/>
+            <span class="title">Digite sua altura:</span>
+            <input id="altura" placeholder="Digite sua altura"/>
+            <button id="soma">Calcular</button>
+            <div id="content"></div>
+        </div>
+    </body>
+    <script>
+        const peso = Number(window.document.getElementById("peso").value);
+        const altura = Number(window.document.getElementById("altura").value);
+        
+        const soma = window.document.getElementById("soma");
+        const content = window.document.getElementById("content");
+
+        const calcIMC = (peso, altura) => {
+            const imc = peso / (altura * altura);
+            return imc;
+        }
+
+        soma.addEventListener("click", () => {
+            let imc = calcIMC(peso, altura);
+            content.innerHTML = `O seu IMC é ${imc.toFixed(2)}`;
+        });
+    </script>
+</html>
